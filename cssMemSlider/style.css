@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+label, span, input {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 65vw;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin: .6rem 0;
+}
+
+.slider {
+  transform: translateY(-1rem);
+}
+
+.slider__track {
+  display: flex;
+  overflow: hidden;
+  background-color: #000000;
+  transition: all 1s;
+}
+
+.slider__slide {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider__slide-picture {
+  width: 65vw;
+  height: 100%;
+  padding: 1.2rem 1.2rem 3rem 1.2rem;
+  border-radius: 1.8rem;
+}
+
+.slider__slide-descr {
+  padding-left: 1.2rem;
+  line-height: 0;
+  margin-top: -1.5rem;
+  color: #eeeeee;
+}
+
+.hidden {
+  width: 0;
+}
+
+.slider__bullets {
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  column-gap: 0.2rem;
+  padding: 0 .95rem 1.2rem 0;
+  margin-top: -2.5rem;
+}
+
+.slider__bullet-wrapper {
+  height: 1.8rem;
+  width: 1.8rem;
+  padding: .5rem;
+  border-radius: 50%;
+}
+
+.slider__bullets-bullet {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  background-color: #0044ff;
+  border-radius: 50%;
+}
+
+.slider__bullet-wrapper:hover {
+  cursor: pointer;
+}
+
+.slider__bullet-wrapper:hover .slider__bullets-bullet {
+  background-color: #eeeeee;
+  transition: .5s;
+}
+
+#pushkin:checked ~ .slider__bullets [for='pushkin'] .slider__bullets-bullet,
+#esenin:checked ~ .slider__bullets [for='esenin'] .slider__bullets-bullet,
+#mayakovsky:checked ~ .slider__bullets [for='mayakovsky'] .slider__bullets-bullet,
+#lenin:checked ~ .slider__bullets [for='lenin'] .slider__bullets-bullet {
+  background-color: transparent;
+  border: .2rem solid #0044ff;
+  transition: .5s;
+}
+
+#pushkin:checked ~ .slider__bullets [for='pushkin']:hover .slider__bullets-bullet,
+#esenin:checked ~ .slider__bullets [for='esenin']:hover .slider__bullets-bullet,
+#mayakovsky:checked ~ .slider__bullets [for='mayakovsky']:hover .slider__bullets-bullet,
+#lenin:checked ~ .slider__bullets [for='lenin']:hover .slider__bullets-bullet {
+  border-color: #eeeeee;
+}
+
+#esenin:checked ~ .slider__track {
+  margin-left: -100%;
+  transition: all 1s;
+}
+
+#mayakovsky:checked ~ .slider__track {
+  margin-left: -200%;
+  transition: all 1s;
+}
+
+#lenin:checked ~ .slider__track {
+  margin-left: -300%;
+  transition: all 1s;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  h1, h2 {
+    display: inline-block;
+    margin: 1.2rem 0;
+    font-size: .8rem;
+    line-height: 0;
+    transform: translateY(-.5rem);
+  }
+
+  .slider {
+    transform: translateY(-2rem);
+  }
+
+  .slider__slide-picture {
+    padding-bottom: 4.5rem;
+  }
+
+  .slider__bullets {
+    justify-content: center;
+    margin-top: -4.1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  h1, h2 {
+    font-size: 0;
+  }
+}

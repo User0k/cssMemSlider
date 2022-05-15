@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Mem Slider</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Сборник цифровых стихов.</h1>
+    <h2>Читать вслух с выражением!</h2>
+    <div class="slider">
+      <div class="slider__body">
+        <input type="radio" name="slide" id="pushkin" class="hidden" checked>
+        <input type="radio" name="slide" id="esenin" class="hidden">
+        <input type="radio" name="slide" id="mayakovsky" class="hidden">
+        <input type="radio" name="slide" id="lenin" class="hidden">
+        <div class="slider__track">
+          <div class="slider__slide">
+            <img src="./images/pushkin.jpg" class="slider__slide-picture" alt="Pushkin">
+            <span class="slider__slide-descr">Пушкин</span>
+          </div>
+          <div class="slider__slide">
+            <img src=".//images/esenin.jpg" class="slider__slide-picture" alt="Esenin">
+            <span class="slider__slide-descr">Есенин</span>
+          </div>
+          <div class="slider__slide">
+            <img src="./images/mayakovsky.jpg" class="slider__slide-picture" alt="Mayakovsky">
+            <span class="slider__slide-descr">Маяковский</span>
+          </div>
+          <div class="slider__slide">
+            <img src="./images/lenin.jpg" class="slider__slide-picture" alt="Lenin">
+            <span class="slider__slide-descr">Finita la...</span>
+          </div>
+        </div>
+        <div class="slider__bullets">
+          <label class="slider__bullet-wrapper" for="pushkin">
+            <span class="slider__bullets-bullet"></span>
+          </label>
+          <label class="slider__bullet-wrapper" for="esenin">
+            <span class="slider__bullets-bullet"></span>
+          </label>
+          <label class="slider__bullet-wrapper" for="mayakovsky">
+            <span class="slider__bullets-bullet"></span>
+          </label>
+          <label class="slider__bullet-wrapper" for="lenin">
+            <span class="slider__bullets-bullet"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
