@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-label, span {
+label, span, input {
   margin: 0;
   padding: 0;
 }
@@ -10,11 +10,17 @@ label, span {
 .container {
   width: 65vw;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 h1,
 h2 {
   text-align: center;
+  margin: .6rem 0;
+}
+
+.slider {
+  transform: translateY(-1rem);
 }
 
 .slider__track {
@@ -39,7 +45,7 @@ h2 {
 .slider__slide-descr {
   padding-left: 1.2rem;
   line-height: 0;
-  margin-top: -1.8rem;
+  margin-top: -1.5rem;
   color: #eeeeee;
 }
 
@@ -77,6 +83,7 @@ h2 {
 
 .slider__bullet-wrapper:hover .slider__bullets-bullet {
   background-color: #eeeeee;
+  transition: .5s;
 }
 
 #pushkin:checked ~ .slider__bullets [for='pushkin'] .slider__bullets-bullet,
@@ -85,6 +92,14 @@ h2 {
 #lenin:checked ~ .slider__bullets [for='lenin'] .slider__bullets-bullet {
   background-color: transparent;
   border: .2rem solid #0044ff;
+  transition: .5s;
+}
+
+#pushkin:checked ~ .slider__bullets [for='pushkin']:hover .slider__bullets-bullet,
+#esenin:checked ~ .slider__bullets [for='esenin']:hover .slider__bullets-bullet,
+#mayakovsky:checked ~ .slider__bullets [for='mayakovsky']:hover .slider__bullets-bullet,
+#lenin:checked ~ .slider__bullets [for='lenin']:hover .slider__bullets-bullet {
+  border-color: #eeeeee;
 }
 
 #esenin:checked ~ .slider__track {
