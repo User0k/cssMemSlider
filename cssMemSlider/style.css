@@ -116,3 +116,42 @@ h2 {
   margin-left: -300%;
   transition: all 1s;
 }
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  h1, h2 {
+    display: inline-block;
+    margin: 1.2rem 0;
+    font-size: .8rem;
+    line-height: 0;
+    transform: translateY(-.5rem);
+  }
+
+  .slider {
+    transform: translateY(-2rem);
+  }
+
+  .slider__slide-picture {
+    padding-bottom: 4.5rem;
+  }
+
+  .slider__bullets {
+    justify-content: center;
+    margin-top: -4.1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  h1, h2 {
+    font-size: 0;
+  }
+}
